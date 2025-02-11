@@ -1,0 +1,126 @@
+
+
+.navigation-tab{
+    padding:10px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: black;
+    color:white;
+    font-size:1rem;
+    border-bottom: 2px solid    ;
+    border-bottom-color:rgba(232, 218, 218, 0.181);
+}
+.nav-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-list .nav{
+    cursor: pointer;
+    align-items: center;
+}
+.burger-tab{
+    visibility: hidden;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+.page-logo .author-name{
+    display: block;
+}
+.page-logo .media-links{
+    display: inline-block;
+    cursor: pointer;
+}
+.page-logo .media-links a{
+    text-decoration: none;
+    color:white;
+}
+.sidebar{
+    width:0px;
+    height: 100vh;
+    position: fixed;
+    right:0;
+    background-color: brown;
+    background-color: black;
+    color:white;
+    font-size:1rem;
+    transition: width 2s ease;
+    /* animation-name: sidebar;
+    animation-duration: 1s; */
+    /* display: none; */
+}
+
+
+.sidebar div{
+    padding:15px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.sidebar div:hover{
+    background-color: hsl(0, 0%, 29%);
+}
+
+
+.navigation-right-content > div{
+    padding: 10px 0px;
+}
+
+@keyframes sidebarOut {
+    to{
+        transform: translate(300px,0px);
+    }
+}
+@keyframes sidebar{
+    from{
+        transform: translate(300px,0px);
+    }
+}
+
+@media screen and (min-width: 601px)   {
+    .sidebar{
+        /* width:0px; */
+        display: none;
+    }
+}    
+@media screen and (min-width: 339px) and (max-width: 600px)  {
+    .burger-tab{
+        visibility: visible;
+        display: flex;
+        align-items: center;
+        justify-content:flex-end;
+    }
+    .nav-list{
+        display: none;
+    }
+   .sidebar{
+        width:0px;
+   }
+}
+@media screen and (max-width: 339px) {
+    .page-logo{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .media-links{
+        font-size:1.2rem;
+    }
+    .navigation-tab{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 10px;
+    }
+    .burger-tab{
+        visibility: visible;
+        display:block;
+        text-align: center;
+    }
+    .nav-list{
+        display: none;
+    }
+    .sidebar{
+        width:0px;
+    }
+}
